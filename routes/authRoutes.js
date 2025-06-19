@@ -28,7 +28,7 @@ router.get('/callback', async (req, res) => {
     const { tokens } = await oAuth2Client.getToken(code); // 👈 Don't manually add redirect_uri here
     oAuth2Client.setCredentials(tokens);
 
-    const redirectUrl = `http://localhost:5173/auth-success?access_token=${tokens.access_token}`;
+    const redirectUrl = `https://campusconnect-frontend-mu.vercel.app/auth-success?access_token=${tokens.access_token}`;
     return res.redirect(redirectUrl);
   } catch (err) {
     console.error('❌ Error during getToken:', err.message);

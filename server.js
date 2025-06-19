@@ -13,7 +13,7 @@ const app = express();
 // ✅ Setup CORS for dev and production
 const allowedOrigins = [
   'http://localhost:5173',
-  'https://your-frontend.vercel.app', // ⬅️ Change this after deploying frontend
+  'https://campusconnect-frontend-mu.vercel.app', // ⬅️ Change this after deploying frontend
 ];
 
 app.use(cors({
